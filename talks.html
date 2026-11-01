@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Talks by Tabitha Ogilvie, cryptographer at King's College London.">
+  <title>Talks – Tabitha Ogilvie</title>
+  <script>
+    try { var t = localStorage.getItem("theme"); if (t) document.documentElement.setAttribute("data-theme", t); } catch (e) {}
+  </script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+  <span>
+    <a href="index.html">Home</a> ·
+    <a href="publications.html">Publications</a> ·
+    <a href="talks.html">Talks</a> ·
+    <a href="cv.pdf">CV</a>
+  </span>
+  <button type="button" id="theme-toggle">dark / light</button>
+</nav>
+
+<h1>Talks</h1>
+
+
+<h2>Invited talks</h2>
+<ul>
+  <li>
+    <span class="title">Concrete Hardness Gaps Between MLWE and LWE.</span><br>
+    London Crypto Day 2026, Royal Holloway, University of London, 6 Nov 2026 <span class="badge" data-until="2026-11-06">upcoming</span>
+    [<a href="https://sites.google.com/view/london-crypto-day/lcd2026">event</a>]
+  </li>
+  <li>
+    <span class="title">Lattice Estimator Updates and the Concrete Hardness Gap Between LWE and RLWE.</span><br>
+    9th HomomorphicEncryption.org Standards Meeting, LG Sciencepark, Seoul, 5 Mar 2026
+    [<a href="https://homomorphicencryption.org/9th-homomorphicencryption-org-standards-meeting/">event</a>]
+  </li>
+  <li>
+    <span class="title">On the Concrete Hardness Gap Between MLWE and LWE.</span><br>
+    CWI Cryptology Group seminar, Amsterdam, 4 Mar 2026
+    [<a href="https://projects.cwi.nl/crypto/internalseminar.php?y=2026">event</a>]
+  </li>
+  <li>
+    <span class="title">Differential Privacy for Free? Harnessing the Noise in Approximate Homomorphic Encryption.</span><br>
+    FHE.org meetup series, online, 8 Jun 2023
+    [<a href="https://fheorg.substack.com/p/next-meetup-scheduled-differential">event</a>]
+    [<a href="https://www.youtube.com/watch?v=J_abn1z9aN8">video</a>]
+  </li>
+  <li>
+    <span class="title">An Introduction to Homomorphic Encryption.</span><br>
+    Privacy-Preserving Data Analysis Workshop, Digital Futures, University of Manchester, 19 May 2022
+    [<a href="https://events.manchester.ac.uk/event/event:l1oz-l38vh8fz-re05sw">event</a>]
+  </li>
+</ul>
+
+<h2>Conference talks</h2>
+<ul>
+  <li>
+    <span class="title">Careful with the Ring! Concrete Hardness Gaps Between LWE and MLWE.</span><br>
+    CRYPTO 2026, Santa Barbara, 17 Aug 2026
+    [<a href="https://link.springer.com/chapter/10.1007/978-3-032-35377-1_15">paper</a>]
+    [<a href="https://iacr.org/submit/files/slides/2026/crypto/crypto2026/865/865_slides.pptx">slides</a>]
+    [<a href="https://crypto.iacr.org/2026/program.php">programme</a>]
+  </li>
+  <li>
+    <span class="title">IND-CPA-D and KR-D Security with Reduced Noise from the HintLWE Problem.</span><br>
+    ASIACRYPT 2025, Melbourne, 11 Dec 2025
+    [<a href="https://asiacrypt.iacr.org/2025/program.php">programme</a>]
+  </li>
+  <li>
+    <span class="title">Differential Privacy for Free? Harnessing the Noise in Approximate Homomorphic Encryption.</span><br>
+    CT-RSA 2024, RSA Conference, San Francisco, May 2024
+  </li>
+  <li>
+    <span class="title">Improved Privacy-Preserving Training using Fixed-Hessian Minimisation.</span><br>
+    WAHC 2020 (online), Dec 2020
+  </li>
+</ul>
+
+
+<footer>
+  Last updated October 2026
+</footer>
+
+<script>
+  document.getElementById("theme-toggle").addEventListener("click", function () {
+    var root = document.documentElement;
+    var cur = root.getAttribute("data-theme") || "dark";
+    var next = cur === "dark" ? "light" : "dark";
+    root.setAttribute("data-theme", next);
+    try { localStorage.setItem("theme", next); } catch (err) {}
+  });
+  // swap "upcoming" items for past-tense versions once the date has passed
+  var today = new Date().toISOString().slice(0, 10);
+  document.querySelectorAll("[data-until]").forEach(function (el) {
+    if (today > el.getAttribute("data-until")) el.remove();
+  });
+  document.querySelectorAll("[data-from]").forEach(function (el) {
+    if (today < el.getAttribute("data-from")) el.remove();
+  });
+</script>
+
+</body>
+</html>

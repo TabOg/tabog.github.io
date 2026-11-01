@@ -1,3 +1,35 @@
+@font-face {
+  font-family: "Atkinson Hyperlegible";
+  src: url("fonts/atkinson-regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Atkinson Hyperlegible";
+  src: url("fonts/atkinson-bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Atkinson Hyperlegible";
+  src: url("fonts/atkinson-italic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Atkinson Hyperlegible";
+  src: url("fonts/atkinson-bolditalic.woff2") format("woff2");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
 :root {
   --fg: #e4e4e4;
   --muted: #a8a8a8;
@@ -23,7 +55,7 @@ body {
   max-width: 720px;
   margin: 0 auto;
   padding: 1em 16px 2em;
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "Atkinson Hyperlegible", system-ui, sans-serif;
   font-size: 17px;
   line-height: 1.5;
   color: var(--fg);
